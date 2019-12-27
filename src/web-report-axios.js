@@ -399,7 +399,7 @@ function Performance(option, fn) {
                 defaults.data = {
                     target: e.target.localName,
                     type: e.type,
-                    resourceUrl: e.target.href || e.target.currentSrc,
+                    resourceUrl: e.target.href || e.target.currentSrc || e.target.src,
                 };
                 if (e.target != window) conf.errorList.push(defaults)
             }, true);
